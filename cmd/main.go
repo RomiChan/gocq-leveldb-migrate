@@ -39,11 +39,6 @@ func Main() {
 	v2db, err := leveldb.OpenFile(*v2, nil)
 	handle(err)
 	defer v2db.Close()
-	{
-		v3db, err := leveldb.OpenFile(*v3, nil)
-		handle(err)
-		_ = v3db.Close()
-	}
 	v3db, err := leveldb.OpenFile(*v3, nil)
 	handle(err)
 
